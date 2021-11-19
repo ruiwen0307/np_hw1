@@ -126,10 +126,6 @@ void load_file(int fd, char* buffer, int ret){
 
 	if((ptr = strstr(buffer, "boundary=")) == 0)
          return;
-
-	printf("----------------------\n");
-	printf("%s\n", buffer);
-	printf("======================\n");
 	
 	ptr += 9;
 	while(*ptr != '\r' && *ptr != '\n'){
